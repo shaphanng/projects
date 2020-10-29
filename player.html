@@ -32,7 +32,7 @@
 </head>
 <body>
     
-<h1 id="start_game"><img src="C:\Users\Shaphan\OneDrive - University of California - Irvine\test\start.png" alt="start" style="width:25%;"></h3>
+<h1 id="start_game"><img src="image\start.png" alt="start" style="width:25%;"></h3>
 
 <div id="foot"></div>
 
@@ -64,7 +64,7 @@ function player_name() {
     txt = "Players, please enter your names to continue.";
   } else {
     txt = "Hello " + p1 + " and " + p2 + "!";
-    document.getElementById("go").innerHTML = "<img src='C:/Users/Shaphan/OneDrive - University of California - Irvine/test/go.png' style='width:25%'>";
+    document.getElementById("go").innerHTML = "<img src='image/go.png' style='width:25%'>";
     players.push(p1)
     players.push(p2)
   
@@ -116,7 +116,7 @@ function next_turn() {
         document.getElementById("start_game").innerHTML = "Thanks for playing!";
         document.getElementById("draw").innerHTML = "";
         document.getElementById("go").innerHTML = "";
-        document.getElementById("restart").innerHTML = "<img src='C:/Users/Shaphan/OneDrive - University of California - Irvine/test/restart.png' style='width:25%'>";
+        document.getElementById("restart").innerHTML = "<img src='image/restart.png' style='width:25%'>";
         counter = tot_count + 1;
         
     } else {
@@ -139,7 +139,7 @@ function next_turn() {
 
 function reveal(input) {
     document.getElementById("draw").innerHTML = input;
-    document.getElementById("go").innerHTML = "<img src='C:/Users/Shaphan/OneDrive - University of California - Irvine/test/next.png' style='width:25%'>";
+    document.getElementById("go").innerHTML = "<img src='image/next.png' style='width:25%'>";
 }
 
 function restart() {
