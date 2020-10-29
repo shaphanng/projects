@@ -1,0 +1,95 @@
+<html>
+<head>
+    <link href='https://fonts.googleapis.com/css?family=Calistoga' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Economica' rel='stylesheet'>
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1 {text-align: center;
+            font-family: 'Calistoga';
+            }
+        p {font-family: 'Calistoga';
+            font-size: 40px;
+            text-align: center;
+            }
+        p.a {font-family: 'Economica';
+            font-size: 80px;
+            text-align: center;
+            height: 180px;
+
+        }
+        div {font-family: 'Economica';
+            font-size: 20px;
+            text-align: center;}
+        </style>
+<img src="https://www.decrypto.info/img/logo.png" alt="Decrypto" style="width:50%;">
+   
+</head>
+<body>
+
+<p id="word1"></p>
+<p id="word2"></p>
+<p id="word3"></p>
+<p id="word4"></p>
+
+<p id="start_game"><img src="C:\Users\Shaphan\OneDrive - University of California - Irvine\test\start.png" alt="start" style="width:25%;"></h3>
+
+
+
+
+
+<script type="text/javascript">
+var reader = new XMLHttpRequest() || new ActiveXObject('MSXML2.XMLHTTP');
+var easy = 'https://raw.githubusercontent.com/dangelov/Pictionary-Card-Generator/master/word-lists/easy.txt'
+var med = 'https://raw.githubusercontent.com/dangelov/Pictionary-Card-Generator/master/word-lists/medium.txt'
+var text_array = [];
+
+document.getElementById("start_game").onclick = function() {get_word(med)};
+
+function get_word(file) {
+    reader.open('get', file, true); 
+    reader.onreadystatechange = displayContents;
+    reader.send(null);
+    document.getElementById('start_game').innerHTML = "<img src='C:/Users/Shaphan/OneDrive - University of California - Irvine/test/restart.png' style='width:25%'>"
+}
+
+function randomIntFromInterval(min, max) { // min and max included 
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+
+
+function displayContents() {
+    if(reader.readyState==4) {
+        text_array = reader.responseText.split("\n");
+        output = pick()
+        document.getElementById('word1').innerHTML = "1: " + output[0]
+        document.getElementById('word2').innerHTML = "2: " + output[1]
+        document.getElementById('word3').innerHTML = "3: " + output[2]
+        document.getElementById('word4').innerHTML = "4: " + output[3]
+        
+    }
+}
+
+function pick() {
+    var i;
+    var words = [];
+    tarray1 = text_array.slice(0)
+    for (i = 0; i < 4; i++) {
+        var word_index = randomIntFromInterval(0, tarray1.length-1);
+        words.push(tarray1[word_index]);
+        tarray1.splice(word_index,1);
+        
+    }
+    return words
+}
+
+</script>
+
+</body>
+</html>
