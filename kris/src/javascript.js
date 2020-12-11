@@ -245,12 +245,12 @@ const sub_ans1 = () => {
             clue.innerHTML = "You've unlocked the final clue: Jurassic Mile!";
             action.appendChild(clue);
             var home = document.createElement('div');
-            home.setAttribute("id", "home");
+            home.setAttribute("id", "home3");
             home.innerHTML = "Home";
             action.appendChild(home);
             canvas.appendChild(action);
 
-            document.getElementById("home").onclick = function() {refresh()};
+            document.getElementById("home3").onclick = function() {refresh()};
 
         }
       
