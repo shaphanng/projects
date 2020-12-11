@@ -360,4 +360,3 @@ const port3 = () => {
 document.getElementById("portal1").onclick = function() {port1_intro()};
 document.getElementById("portal2").onclick = function() {port2_intro()};
 document.getElementById("portal3").onclick = function() {port3_intro()};
-
