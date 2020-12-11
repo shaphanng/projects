@@ -233,11 +233,11 @@ const sub_ans1 = () => {
         
         if (i!=9) {
         var button = document.createElement('div');
-        button.setAttribute("id", "continue");
+        button.setAttribute("id", "continue3");
         button.innerHTML = "Continue >";
         action.appendChild(button);
         canvas.appendChild(action);
-        document.getElementById("continue").onclick = function() {port3()};
+        document.getElementById("continue3").onclick = function() {port3()};
         }
         else {
             var clue = document.createElement('div');
@@ -360,4 +360,3 @@ const port3 = () => {
 document.getElementById("portal1").onclick = function() {port1_intro()};
 document.getElementById("portal2").onclick = function() {port2_intro()};
 document.getElementById("portal3").onclick = function() {port3_intro()};
-
