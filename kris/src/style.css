@@ -64,6 +64,13 @@ table.b {
     margin: auto;   
 }
 
+#action3 {
+    width: 800px;
+    margin-top:25px;
+    margin: auto;   
+    text-align: center;
+}
+
 #questions {
     width: 800px;
     margin: auto;   
