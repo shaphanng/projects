@@ -222,14 +222,14 @@ const sub_ans1 = () => {
     input.value = '';
     if (submitted_answer == answer){
         try {
-            document.getElementById("action").remove()    
+            document.getElementById("action3").remove()    
             
         }
         catch {}
         document.getElementById("answer").remove();
         document.getElementById("submit").remove();
         var action = document.createElement('div');
-        action.setAttribute("id", "action");
+        action.setAttribute("id", "action3");
         
         if (i!=9) {
         var button = document.createElement('div');
@@ -257,13 +257,13 @@ const sub_ans1 = () => {
     }
     else {   
         try {
-            document.getElementById("action").remove()    
+            document.getElementById("action3").remove()    
             //console.log('here')
         
         }
         catch {}
         var action = document.createElement('div');
-        action.setAttribute("id", "action");
+        action.setAttribute("id", "action3");
         var wrong = document.createElement('div');
         wrong.setAttribute("id", "wrong");
         wrong.innerHTML = "Wrong. Try again!";
