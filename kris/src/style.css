@@ -58,6 +58,20 @@ table.b {
     text-align: center;
 }
 
+#continue3, #home3 {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:25px;
+    color: white;
+    cursor: pointer;
+    background-color: maroon;
+    border-radius: 4px;
+    font-family: 'PT Sans Narrow'; 
+    padding: 5px 5px;
+    width: 100px;
+    text-align: center;
+}
+
 #action {
     width: 800px;
     margin-top:25px;
